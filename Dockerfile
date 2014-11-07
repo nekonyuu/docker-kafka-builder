@@ -14,4 +14,4 @@ WORKDIR /root
 ADD kafka-specs/kafka* /root/
 
 # Build on run !
-CMD cd /root && spectool -g -R kafka.spec && cp kafka kafka.nofiles.conf kafka-server /root/rpmbuild/SOURCES/ && rpmbuild -ba kafka.spec && cp /root/rpmbuild/RPMS/x86_64/*rpm /target
+CMD cd /root && spectool -g -R kafka.spec && cp kafka kafka.nofiles.conf kafka-server kafka-env-mem-fix.patch /root/rpmbuild/SOURCES/ && rpmbuild -ba kafka.spec && cp /root/rpmbuild/RPMS/x86_64/*rpm /target

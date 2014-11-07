@@ -19,8 +19,10 @@ Source0: http://mirrors.ircam.fr/pub/apache/kafka/%{kafka_version}/%{kafka_name}
 Source1: kafka-server
 Source2: kafka
 Source3: kafka.nofiles.conf
+Patch0: kafka-env-mem-fix.patch 
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-%(%{__id_u} -n)
 Provides: kafka
+Requires: java
 Packager: Jonathan "nekonyuu" Raffre <nk@nyuu.eu>
 
 %description
@@ -60,6 +62,8 @@ design page for more detail
 
 %prep
 %setup -n %{kafka_name}_2.10-%{kafka_version}
+
+%patch0 -p0
 
 %build
 

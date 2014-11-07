@@ -1,0 +1,9 @@
+--- bin/kafka-server-start.sh.orig  2014-11-07 13:37:51.253786388 +0000
++++ bin/kafka-server-start.sh   2014-11-07 13:38:02.883735071 +0000
+@@ -21,7 +21,6 @@
+ fi
+ base_dir=$(dirname $0)
+ export KAFKA_LOG4J_OPTS="-Dlog4j.configuration=file:$base_dir/../config/log4j.properties"
+-export KAFKA_HEAP_OPTS="-Xmx1G -Xms1G"
+ 
+ EXTRA_ARGS="-name kafkaServer -loggc"

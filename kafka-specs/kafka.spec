@@ -1,7 +1,7 @@
 %define kafka_name kafka
 %define kafka_branch 0.8
 %define kafka_version 0.8.1.1
-%define release_version 1
+%define release_version 2
 %define kafka_home /opt/%{kafka_name}-%{kafka_version}
 %define etc_kafka /etc/%{name}
 %define config_kafka %{etc_kafka}/config
@@ -10,7 +10,7 @@
 
 Name: %{kafka_name}
 Version: %{kafka_version}
-Release: %{release_version}
+Release: %{release_version}%{?dist}
 Summary: Apache Kafka is a high-throughput distributed publish-subscribe messaging system.
 License: Apache 2.0
 URL: http://incubator.apache.org/kafka/

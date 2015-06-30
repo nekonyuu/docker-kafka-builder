@@ -1,6 +1,6 @@
 %define kafka_name kafka
 %define kafka_branch 0.8
-%define kafka_version 0.8.1.1
+%define kafka_version 0.8.2.1
 %define release_version 2
 %define kafka_home /opt/%{kafka_name}-%{kafka_version}
 %define etc_kafka /etc/%{name}
